@@ -1,8 +1,6 @@
 """Build and install Finalyze."""
 
-import os
-
-from setuptools import Extension, find_packages, setup
+from setuptools import find_packages, setup
 
 setup(
     name="finalyze",
@@ -24,9 +22,11 @@ setup(
     zip_safe=False,
     packages=find_packages(exclude=["tests*"]),
     install_requires=[
+        "alembic",
         "sqlalchemy",
         "pandas",
         "yfinance",
-        "psycopg2-binary"
+        "psycopg2-binary",
+        "alpha_vantage",
     ],
 )

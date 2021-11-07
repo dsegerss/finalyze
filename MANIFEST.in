@@ -1,3 +1,10 @@
+include alembic.ini
+include alembic/README
+include requirements.in
+recursive-include alembic *.mako
+recursive-include alembic *.py
+recursive-include alembic/versions *.py
+recursive-include finalyze *.py
 include           .pre-commit-config.yaml
 recursive-include tests *.py
 global-exclude    *~
